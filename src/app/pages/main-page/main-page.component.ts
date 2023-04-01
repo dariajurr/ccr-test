@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { IResource } from 'src/app/models/resource';
 import { IUser } from 'src/app/models/user';
 import { ModalService } from 'src/app/services/modal.service';
@@ -10,7 +10,7 @@ import { UsersService } from 'src/app/services/users.service';
   templateUrl: './main-page.component.html',
   styleUrls: ['./main-page.component.scss']
 })
-export class MainPageComponent {
+export class MainPageComponent implements OnInit{
   users:IUser[] = [];
   resources:IResource[] = [];
   

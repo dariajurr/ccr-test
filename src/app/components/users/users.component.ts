@@ -19,10 +19,8 @@ export class UsersComponent {
   }
 
   deleteUser(id) {
-    console.log(id);
-    this.userService.deleteUser(id).subscribe(id => {
+    this.userService.deleteUser(id).subscribe(ID => {
       this.modalService.open();
-      console.log('user: ', id);
     })
   }
 }

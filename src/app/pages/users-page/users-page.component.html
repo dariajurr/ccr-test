@@ -1,0 +1,10 @@
+<section class="users">
+    <h2 class="users__title">Users</h2>
+    <div class="users__items">
+        <app-users *ngFor="let user of users" [user]="user" class="users__item"></app-users>
+    </div>
+</section>
+
+<app-modal *ngIf="modalService.isVisible$ | async" title="Deleting user">
+    <p>User has been deleted</p>
+</app-modal>

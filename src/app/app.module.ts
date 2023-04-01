@@ -9,6 +9,8 @@ import { ModalComponent } from './components/modal/modal.component';
 import { UsersComponent } from './components/users/users.component';
 import { ResourceComponent } from './components/resource/resource.component';
 import { HttpClientModule } from '@angular/common/http';
+import { UsersPageComponent } from './pages/users-page/users-page.component';
+import { ResourcePageComponent } from './pages/resource-page/resource-page.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { HttpClientModule } from '@angular/common/http';
     MainPageComponent,
     ModalComponent,
     UsersComponent,
-    ResourceComponent
+    ResourceComponent,
+    UsersPageComponent,
+    ResourcePageComponent
   ],
   imports: [
     BrowserModule,
