@@ -1,0 +1,40 @@
+@import "../../styles/global.scss";
+@import "../../styles/variables.scss";
+
+.main {
+    padding-top: 40px;
+
+    &__items {
+        max-width: 65%;
+        margin: auto;
+        
+    }
+
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+    }
+
+    &__text-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 10px;
+        width: 150px;
+    }
+
+    &__title {
+        margin: 0;
+    }
+
+    &__link {
+        text-decoration: none;
+        color: #000;
+
+        &:hover {
+            text-decoration:underline;
+        }
+    }
+}

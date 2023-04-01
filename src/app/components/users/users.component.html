@@ -1,0 +1,7 @@
+<article class="user-card">
+    <button class="user-card__btn" (click)="deleteUser(user['id'])">&#10006;</button>
+    <a [title]="user['first_name'] + ' details'" [routerLink]="['/users', user['id']]" class="user-card__link">
+        <img [src]="user['avatar']" [alt]="user['first_name']" class="user-card__image">
+        <p class="user-card__title">{{ user['first_name'] }} {{ user['last_name'] }}</p>
+    </a>
+</article>

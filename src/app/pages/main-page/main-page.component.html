@@ -1,0 +1,23 @@
+<main class="main">
+    <div class="main__items">
+        <section class="main__item">
+            <div class="main__text-content">
+                <h3 class="main__title">Users:</h3>
+                <a href="" class="main__link">See more &rarr;</a>
+            </div>
+            <app-users *ngFor="let user of users.slice(0,4)" [user]="user"></app-users>
+        </section>
+        <section class="main__item">
+            <div class="main__text-content">
+                <h3 class="main__title">Resource:</h3>
+                <a href="" class="main__link">See more &rarr;</a>
+            </div>
+
+            <app-resource *ngFor="let resource of resources.slice(0,4)" [resource]="resource"></app-resource>
+        </section>
+    </div>
+</main>
+
+<app-modal *ngIf="modalService.isVisible$ | async" title="Deleting user">
+    <p>User has been deleted</p>
+</app-modal>

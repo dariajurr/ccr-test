@@ -1,0 +1,46 @@
+@import "../../styles/global.scss";
+@import "../../styles/variables.scss";
+
+.user-card {
+    position: relative;
+    border-radius: 6px;
+    overflow: hidden;
+    border: solid 1px $charcoal;
+    text-align: center;
+    transition: 150ms ease-in-out;
+
+    &:hover {
+        transform: scale(1.1);
+        box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    }
+
+    &__btn {
+        position: absolute;
+        top: 5px;
+        right: 7px;
+        border: none;
+        border: solid 1px $charcoal;
+        border-radius: 50%;
+        background:rgba($color: #fff, $alpha: .6);
+        padding: 0;
+        padding: 2px 5px;
+        cursor: pointer;
+    }
+
+    &__link {
+        text-decoration: none;
+        color: #000;
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+    }
+
+    &__image {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        object-position: center center;
+    }
+
+   
+}

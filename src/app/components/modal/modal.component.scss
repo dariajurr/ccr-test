@@ -1,0 +1,29 @@
+@import "../../styles/global.scss";
+@import "../../styles/variables.scss";
+
+.overlay {
+    background-color: rgba($color: #000000, $alpha: .5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup {
+    width: 500px;
+    position: absolute;
+    border-radius: 10px;
+    background-color: #fff;
+    padding: 20px;
+    font-size: $font-med;
+
+    &__title {
+        margin: 0;
+        font-size: $font-lg;
+        text-align: center;
+    }
+}
