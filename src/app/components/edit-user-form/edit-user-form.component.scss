@@ -1,0 +1,32 @@
+@import "../../styles/global.scss";
+@import "../../styles/variables.scss";
+
+.form {
+    display: flex;
+    flex-direction: column;
+    max-width: 80%;
+    margin: auto;
+
+    &__input {
+        margin-bottom: 15px;
+        border: solid 1 px $charcoal;
+        padding: 5px;
+    }
+
+    &__btn{
+        margin: 15px 0;
+        background: none;;
+        border: none;
+        color: #fff;
+        background-color: $celtic-blue;
+        border: solid 1 px $charcoal;
+        border-radius: 2px;
+        font-size: $font-med;
+        padding: 5px;
+        cursor: pointer;
+
+        &:hover {
+            opacity: .8;
+        }
+    }
+}

@@ -13,6 +13,12 @@
     align-items: center;
 }
 
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .popup {
     width: 500px;
     position: absolute;

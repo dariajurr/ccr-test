@@ -1,0 +1,16 @@
+<section class="user">
+    <h2 class="user__title">{{title}}</h2>
+    <div class="user__card" *ngIf="user">
+        <button class="user__btn" (click)="modalService.open()">&#9998;</button>
+        <img [src]="user.avatar" [alt]="user.first_name" class="user__img">
+        <div class="user__info">
+            <p class="">{{user.first_name}}</p>
+            <p>{{user.last_name}}</p>
+            <p>{{user.email}}</p>
+        </div>
+    </div>
+</section>
+
+<app-modal *ngIf="modalService.isVisible$ | async" title="Edit user">
+    <app-edit-user-form [userID]="userID"></app-edit-user-form>
+</app-modal>

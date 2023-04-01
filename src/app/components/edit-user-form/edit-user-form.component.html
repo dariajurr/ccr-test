@@ -1,0 +1,8 @@
+<p class="form__title">{{ title }}</p>
+<form *ngIf="!status" [formGroup]="editForm" (ngSubmit)="submit()" [name]="title" class="form">
+    <input class="form__input" formControlName="name" placeholder="Enter Name value">
+    <input class="form__input" formControlName="job" placeholder="Enter Job value">
+    <button class="form__btn" type="submit">Submit</button>
+</form>
+
+{{status}}

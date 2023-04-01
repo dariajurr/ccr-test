@@ -11,6 +11,9 @@ import { ResourceComponent } from './components/resource/resource.component';
 import { HttpClientModule } from '@angular/common/http';
 import { UsersPageComponent } from './pages/users-page/users-page.component';
 import { ResourcePageComponent } from './pages/resource-page/resource-page.component';
+import { UserDetailPageComponent } from './pages/user-detail-page/user-detail-page.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { EditUserFormComponent } from './components/edit-user-form/edit-user-form.component'
 
 @NgModule({
   declarations: [
@@ -21,12 +24,16 @@ import { ResourcePageComponent } from './pages/resource-page/resource-page.compo
     UsersComponent,
     ResourceComponent,
     UsersPageComponent,
-    ResourcePageComponent
+    ResourcePageComponent,
+    UserDetailPageComponent,
+    EditUserFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
