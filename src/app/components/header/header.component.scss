@@ -1,0 +1,42 @@
+@import "../../styles/global.scss";
+@import "../../styles/variables.scss";
+
+.header {
+    background-color: $celtic-blue;
+    color: #fff;
+    font-size: $font-med;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+
+    &__nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 70%;
+        margin: auto;
+    }
+
+    &__title {
+        font-size: $font-lg;
+    }
+
+    &__nav-items {
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+ 
+    }
+
+    &__nav-item {
+        margin-right: 15px;
+    }
+
+    &__link {
+        text-decoration: none;
+        color: #fff;
+        cursor: pointer;
+    }
+}
