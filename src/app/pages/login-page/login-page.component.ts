@@ -10,8 +10,7 @@ import { ModalService } from 'src/app/services/modal.service';
   styleUrls: ['./login-page.component.scss']
 })
 export class LoginPageComponent {
-  token: string
-  error: string
+  status: string
 
   constructor(
     private authService: AuthService,
@@ -42,12 +41,13 @@ export class LoginPageComponent {
   submit() {
     this.authService.login(this.loginForm.value).subscribe({
       next: (data) => {
+        console.log('data: ', data);
         this.modalService.open()
-        this.token = `Succes! Your token: ${data['token']}`
+        this.status = `Succes! Your token: ${data['token']}`
         this.loginForm.reset()
       },
       error: (error) => {
-        this.error = `Error: ${error.error.error}. Try to use correct data. 
+        this.status = `Error: ${error.error.error}. Try to use correct data. 
         Email: eve.holt@reqres.in, password: pistol`
         this.modalService.open()
       }

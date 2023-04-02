@@ -19,5 +19,5 @@
 </section>
 
 <app-modal *ngIf="modalService.isVisible$ | async" title="Edit user">
-    <p>{{token || error}}</p>
+    <p>{{status}}</p>
 </app-modal>
