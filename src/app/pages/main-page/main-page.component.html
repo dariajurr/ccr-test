@@ -3,14 +3,14 @@
         <section class="main__item">
             <div class="main__text-content">
                 <h3 class="main__title">Users:</h3>
-                <a href="/users" class="main__link">See more &rarr;</a>
+                <a routerLink="/users" class="main__link">See more &rarr;</a>
             </div>
             <app-users *ngFor="let user of users.slice(0,4)" [user]="user"></app-users>
         </section>
         <section class="main__item">
             <div class="main__text-content">
                 <h3 class="main__title">Resource:</h3>
-                <a href="/resource" class="main__link">See more &rarr;</a>
+                <a routerLink="/resource" class="main__link">See more &rarr;</a>
             </div>
 
             <app-resource *ngFor="let resource of resources.slice(0,4)" [resource]="resource"></app-resource>
