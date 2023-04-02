@@ -1,8 +1,23 @@
 <p class="form__title">{{ title }}</p>
 <form *ngIf="!status" [formGroup]="editForm" (ngSubmit)="submit()" [name]="title" class="form">
-    <input class="form__input" formControlName="name" placeholder="Enter Name value">
-    <input class="form__input" formControlName="job" placeholder="Enter Job value">
-    <button class="form__btn" type="submit">Submit</button>
+    <div class="form__input-group">
+        <input class="form__input" formControlName="name" placeholder="Enter Name value">
+        <div class="form__error-group" *ngIf="_name.invalid && (_name.touched || _name.dirty)">
+            <span class="form__error" *ngIf="_name.errors?.required">Field is required</span>
+            <span class="form__error" *ngIf="_name.errors?.email&&_name.touched">Wrong email format</span>
+        </div>
+    </div>
+    <div class="form__input-group">
+        <input class="form__input" formControlName="job" placeholder="Enter Job value">
+        <div class="form__error-group" *ngIf="_job.invalid && (_job.touched || _job.dirty)">
+            <span class="form__error" *ngIf="_job.errors?.required">Field is required</span>
+            <span class="form__error" *ngIf="_job.errors?.email&&_job.touched">Wrong email format</span>
+        </div>
+    </div>
+    
+    
+    <button class="form__btn" type="submit" [disabled]="_name.invalid || _job.invalid">Submit</button>
 </form>
 
 {{status}}
+

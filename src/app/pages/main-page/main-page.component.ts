@@ -25,12 +25,10 @@ export class MainPageComponent implements OnInit{
   ngOnInit(): void {
     this.usersService.getAll().subscribe(users => {
       this.users = users['data']
-      console.log('this.users: ', this.users);
     });
 
     this.resourceService.getAll().subscribe(resource => {
       this.resources = resource['data']
-      console.log('this.resource: ', this.resources);
     });
   }
 }

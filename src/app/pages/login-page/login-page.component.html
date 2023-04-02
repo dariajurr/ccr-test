@@ -1,0 +1,23 @@
+<section class="login">
+    <h2 class="login__title">Login</h2>
+    <form [formGroup]="loginForm" (ngSubmit)="submit()" class="form">
+        <div class="form__input-group">
+            <input #email class="form__input" formControlName="email" placeholder="Enter email" (keyup.enter)="email.blur()">
+            <div class="form__error-group" *ngIf="_email.invalid && (_email.touched || _email.dirty)">
+                <span class="form__error" *ngIf="_email.errors?.required">Field is required</span>
+                <span class="form__error" *ngIf="_email.errors?.email&&_email.touched">Wrong email format</span>
+            </div>
+        </div>
+        <div class="form__input-group">
+            <input class="form__input" #password formControlName="password" placeholder="Enter password" (keyup.enter)="password.blur()" type="password">
+            <div class="form__error-group" *ngIf="_password.invalid && (_password.touched || _password.dirty)">
+                <span class="form__error" *ngIf="_password.errors?.required">Field is required</span>
+            </div>
+        </div>
+        <button class="form__btn" type="submit" [disabled]="_email.invalid || _password.invalid">Submit</button>
+    </form>
+</section>
+
+<app-modal *ngIf="modalService.isVisible$ | async" title="Edit user">
+    <p>{{token || error}}</p>
+</app-modal>

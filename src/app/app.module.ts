@@ -13,7 +13,9 @@ import { UsersPageComponent } from './pages/users-page/users-page.component';
 import { ResourcePageComponent } from './pages/resource-page/resource-page.component';
 import { UserDetailPageComponent } from './pages/user-detail-page/user-detail-page.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { EditUserFormComponent } from './components/edit-user-form/edit-user-form.component'
+import { EditUserFormComponent } from './components/edit-user-form/edit-user-form.component';
+import { RegisterPageComponent } from './pages/register-page/register-page.component';
+import { LoginPageComponent } from './pages/login-page/login-page.component'
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { EditUserFormComponent } from './components/edit-user-form/edit-user-for
     UsersPageComponent,
     ResourcePageComponent,
     UserDetailPageComponent,
-    EditUserFormComponent
+    EditUserFormComponent,
+    RegisterPageComponent,
+    LoginPageComponent
   ],
   imports: [
     BrowserModule,
