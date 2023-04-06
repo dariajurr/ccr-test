@@ -11,6 +11,7 @@ import { ModalService } from 'src/app/services/modal.service';
 })
 export class RegisterPageComponent {
   status: string
+  title: string="Reg"
 
   constructor(
     private authService: AuthService,
@@ -41,7 +42,6 @@ export class RegisterPageComponent {
   submit() {
     this.authService.register(this.registerForm.value).subscribe({
       next: (data) => {
-        console.log('data: ', data);
         this.status = `Succes! Your token: ${data['token']}`
         this.modalService.open()
         this.registerForm.reset()

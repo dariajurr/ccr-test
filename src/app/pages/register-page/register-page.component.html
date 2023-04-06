@@ -1,5 +1,5 @@
 <section class="register">
-    <h2 class="register__title">Register</h2>
+    <h2 class="register__title">{{title}}</h2>
     <form [formGroup]="registerForm" (ngSubmit)="submit()" class="form">
         <div class="form__input-group">
             <input class="form__input" #email formControlName="email" placeholder="Enter email" (keyup.enter)="email.blur()">
@@ -18,6 +18,6 @@
     </form>
 </section>
 
-<app-modal *ngIf="modalService.isVisible$ | async" title="Register">
+<app-modal *ngIf="modalService.isVisible$ | async" title={{title}}>
     <p>{{status}}</p>
 </app-modal>
